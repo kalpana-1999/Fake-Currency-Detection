@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Hero Section -->
+<div class="p-5 mb-5 text-white rounded"
+     style="background: linear-gradient(135deg, #1d3557, #457b9d);">
+    <div class="container py-4">
+        <h1 class="display-5 fw-bold text-center">
+            Fake Currency Detection System
+        </h1>
+        <p class="fs-5 text-center mt-3">
+            Automated Fake Currency Detection Using Machine Learning & Image Processing
+        </p>
+
+        <div class="text-center mt-4">
+            <a href="/check" class="btn btn-light btn-lg px-4">
+                Check Currency Now
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Introduction Section -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <h3 class="card-title mb-3">Introduction</h3>
+                    <p class="text-muted">
+                        Counterfeit currency circulation is a significant threat to the
+                        financial stability and economic structure of any nation.
+                        With advancements in printing technology, fake notes have become
+                        increasingly sophisticated, making manual detection unreliable.
+                    </p>
+
+                    <p class="text-muted">
+                        Traditional techniques such as ultraviolet scanning, watermark
+                        verification, and physical inspection require trained personnel
+                        and specialized equipment. These methods are time-consuming and
+                        prone to human error.
+                    </p>
+
+                    <p class="text-muted">
+                        This project proposes an intelligent, automated fake currency
+                        detection system using machine learning and computer vision
+                        techniques to accurately classify currency notes as genuine or fake.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Feature Section -->
+<div class="container mt-4">
+    <div class="row text-center">
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Machine Learning</h5>
+                    <p class="card-text text-muted">
+                        Uses CNN models to automatically learn complex visual patterns
+                        from currency note images.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Image Processing</h5>
+                    <p class="card-text text-muted">
+                        Analyzes security features such as textures, patterns,
+                        and print quality using image processing techniques.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Real-Time Detection</h5>
+                    <p class="card-text text-muted">
+                        Provides instant results with confidence score,
+                        suitable for banking and retail environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

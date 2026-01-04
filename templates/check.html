@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="mb-3">Check Currency</h3>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" class="form-control mb-3" required>
+    <button class="btn btn-primary">Check Currency</button>
+</form>
+
+{% if image_path %}
+<hr>
+<h5>Uploaded Image:</h5>
+<img src="/{{ image_path }}" class="img-fluid rounded mb-3" style="max-width:300px;">
+{% endif %}
+
+{% if result %}
+<div class="alert mt-3 
+    {% if result == 'Genuine Currency' %}alert-success{% else %}alert-danger{% endif %}">
+    <h4>{{ result }}</h4>
+    <p>Confidence: {{ confidence }}%</p>
+</div>
+{% endif %}
+
+<!-- 🔽 AUTO SLIDING HISTORY (NO CLICK) -->
+{% if history and history|length > 0 %}
+<hr>
+
+<div class="history-panel mt-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <h5 class="mb-3 text-center">Recent History</h5>
+
+            {% for item in history|reverse %}
+            <div class="d-flex align-items-center mb-3 border-bottom pb-2">
+
+                <img src="{{ url_for('static', filename='uploads/' ~ item.image) }}"
+                     width="80" class="rounded me-3">
+
+                <div>
+                    <strong>
+                        {% if item.result == "Genuine Currency" %}
+                            <span class="text-success">Genuine</span>
+                        {% else %}
+                            <span class="text-danger">Fake</span>
+                        {% endif %}
+                    </strong>
+                    <div class="text-muted small">
+                        Confidence: {{ item.confidence }}%
+                    </div>
+                    <div class="text-muted small">
+                        {{ item.time }}
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
