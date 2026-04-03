@@ -1,4 +1,4 @@
-Introduction:
+<b>Introduction:</b><br>
 Created a web based Fake currency detection system using machine learning technique and image processing.
 Technologies used:
 Python,OpenCV,NumPy, Flask, Tensorflow 
