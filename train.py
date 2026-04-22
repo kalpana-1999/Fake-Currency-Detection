@@ -8,8 +8,14 @@ TRAIN_DIR = "dataset/train"
 TEST_DIR = "dataset/test"
 MODEL_PATH = "fake_currency_model.h5"
 
-# Image generators
-train_datagen = ImageDataGenerator(rescale=1./255)
+# Image generators — Augmentation added ✅
+train_datagen = ImageDataGenerator(
+    rescale=1./255,
+    rotation_range=15,
+    zoom_range=0.1,
+    horizontal_flip=True,
+    brightness_range=[0.8, 1.2]
+)
 test_datagen = ImageDataGenerator(rescale=1./255)
 
 train_data = train_datagen.flow_from_directory(
