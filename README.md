@@ -13,7 +13,7 @@ Dataset<br>
 - Total: 222 images<br>
 - Data Augmentation applied to improve model performance<br>
 <b>Limitation:</b></br>
-- Dataset is small (222 images)n<br>
-- Currently works only for 500 rs noten<br>
-- Real world performance may vary with image qualityn<br>
+- Dataset is small (222 images)<br>
+- Currently works only for 500 rs note<br>
+- Real world performance may vary with image quality<br>
 
